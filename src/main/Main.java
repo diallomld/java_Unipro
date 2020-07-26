@@ -180,14 +180,5 @@ public class Main {
 		
 	}
 	
-	private static void menu(int nb) {
-		do {
-			System.out.println("Que voulez-vous ? ");
-			
-			System.out.println("1. Moussa frappe Fodé");
-			System.out.println("2. Fodé frappe Moussa");
-			
-		} while (nb <1 || nb > 2);
-	}
 
 }
