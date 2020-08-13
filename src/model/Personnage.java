@@ -1,6 +1,8 @@
 package model;
 
-public class Personnage {
+import service.IPersonnage;
+
+public class Personnage implements IPersonnage {
 	
 	private int vie = 5;
 
@@ -36,16 +38,29 @@ public class Personnage {
 		this.nom = nom;
 	}
 	
+	/* (non-Javadoc)
+	 * @see service.IPersonnage#attaque(service.Personnage)
+	 */
+	@Override
 	public void attaque(Personnage cible) {
-	  //this.vie -= this.atk;
+		//this.vie -= this.atk;
 		//System.out.println(cible.getNom());
 		//cible.setVie(10);
+		
 		cible.vie -= this.atk;
 	}
 	
+	/* (non-Javadoc)
+	 * @see service.IPersonnage#isDie()
+	 */
+	@Override
 	public boolean isDie() {
 		return this.vie <= 0 ;
 	}
+	/* (non-Javadoc)
+	 * @see service.IPersonnage#regenerer()
+	 */
+	@Override
 	public void regenerer(){
 			this.vie = 5;
 	}

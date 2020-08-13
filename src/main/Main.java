@@ -172,7 +172,9 @@ public class Main {
 				
 			} catch (Exception e) {
 				
-				System.out.println("Veuillez saisir un nombre :)");
+				System.err.println("Veuillez saisir un nombre :)");
+				break;
+				
 			}
 		}while(!moussa.isDie() && !fode.isDie());
 		
